@@ -92,20 +92,26 @@ def getCurTimeLesson():
         print("Now lesson - ", (curLesson + 1))
         return curLesson
 
-def getCurrentCourse:
+
+def getCurrentCourse():
     curWeekday = getCurWeekday()
     curLesson = getCurTimeLesson()
+    curWeekday = 0
+    curLesson = 2
     if curWeekday == 0:
         if curLesson == 0:
             print()
         if curLesson == 1:
             print()
         if curLesson == 2:
+
             print()
+            return 2
         if curLesson == 3:
             print()
         if curLesson == 4:
             print()
+            return 4
         if curLesson == 5:
             print()
 
@@ -114,8 +120,10 @@ def getCurrentCourse:
             print()
         if curLesson == 1:
             print()
+            return 5
         if curLesson == 2:
             print()
+            return 5
         if curLesson == 3:
             print()
         if curLesson == 4:
@@ -130,6 +138,7 @@ def getCurrentCourse:
             print()
         if curLesson == 2:
             print()
+            return 0
         if curLesson == 3:
             print()
         if curLesson == 4:
@@ -144,10 +153,12 @@ def getCurrentCourse:
             print()
         if curLesson == 2:
             print()
+            return 3
         if curLesson == 3:
             print()
         if curLesson == 4:
             print()
+            return 2
         if curLesson == 5:
             print()
 
@@ -158,10 +169,13 @@ def getCurrentCourse:
             print()
         if curLesson == 2:
             print()
+            return 3
         if curLesson == 3:
             print()
+            return 1
         if curLesson == 4:
             print()
+            return 0
         if curLesson == 5:
             print()
 
@@ -172,8 +186,10 @@ def getCurrentCourse:
             print()
         if curLesson == 2:
             print()
+            return 1
         if curLesson == 3:
             print()
+            return 4
         if curLesson == 4:
             print()
         if curLesson == 5:
@@ -182,13 +198,15 @@ def getCurrentCourse:
 
 what_course = 0
 
-if logging_succes:
-    print("Logging succes, pls choose course:<1-6>")
+what_course = getCurrentCourse()
 
-    what_course = input()
+if logging_succes:
+
+    print("Logging succes, now we're studying on:", (what_course))
+    #what_course = input()
     time.sleep(2)
     if what_course != 0:
-        select_course(what_course-1)
+        select_course(what_course+1)
 print("Your chose: ", what_course)
 
 while True:
